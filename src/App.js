@@ -11,7 +11,8 @@ import TaskDetails from './components/TaskDetails';
 import ApplyTask from './components/ApplyTask';
 import BidSubmitted from './components/BidSubmitted';
 import AreYouSure from './components/AreYouSure';
-import Dashboard from './components/Dashboard';
+import DashboardParent from './components/DashboardParent';
+import Applicants from './components/Applicants';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+       <Route path="/dashboard/:userRole" element={<DashboardParent />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/login" element={<Login />} />
         <Route path="/ad" element={<Ad />} />
@@ -30,6 +31,7 @@ function App() {
         <Route path="/applyTask" element={<ApplyTask />} />
         <Route path="/bidSubmitted" element={<BidSubmitted />} />
         <Route path="/areyousure" element={<AreYouSure />} />
+        <Route path="/applicants/:id" element={<Applicants />} />
 
       </Routes>
     </div>

@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -17,27 +16,26 @@ import repairing from '../pictures/repairing.png';
 import electronics from '../pictures/electronics.png';
 import art from '../pictures/art.png';
 import graphicDesign from '../pictures/graphicDesign.png';
+import './HomePage.css';
 
 
 
 export default function HomePage(){
    
-    function handleClick(){
-        alert("it works")
-    }
     return (
         <div>
             <div>
-            
+            <h1 className="homepage-title mb-4 px-5">Do you want to work?</h1>
+            <h3 className="mb-4 px-5" >Find a job you can do</h3>
             <Container>
-                <Row>
+                <Row className='mb-5'>
                     <Col lg={true}>
-                   <img className='img-fluid'
+                   <img className='img-fluid mb-4'
                         src={finance}
                         alt="finance"
                       />  
-                       <Button onClick={handleClick}>Finance</Button>
-                        <ul>
+                       <h4>Finance</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Budgeting</a></li>
                         <li><a href="#">Personal finance advice</a></li>
                         <li><a href="#">Financial planning</a></li>
@@ -49,12 +47,12 @@ export default function HomePage(){
                     </Col>
 
                     <Col lg={true}>
-                      <img className='img-fluid'
+                      <img className='img-fluid mb-4'
                         src={accounting}
                         alt="accounting"
                       />  
-                       <Button onClick={handleClick}>Accounting</Button>
-                        <ul>
+                       <h4>Accounting</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Bookkeeping</a></li>
                         <li><a href="#">Tax reporting(basic)</a></li>
                         <li><a href="#">Invoicing</a></li>
@@ -65,12 +63,12 @@ export default function HomePage(){
                     </Col>
                     
                     <Col lg={true}>
-                      <img className='img-fluid'
+                      <img className='img-fluid mb-4'
                         src={IT}
                         alt="IT"
                       />  
-                       <Button onClick={handleClick}>IT</Button> 
-                        <ul>
+                       <h4>IT</h4> 
+                        <ul className='p-0'>
                         <li><a href="#">IT support / troubleshooting</a></li>
                         <li><a href="Tasks">Web development</a></li>
                         <li><a href="#">App testing</a></li>
@@ -80,13 +78,13 @@ export default function HomePage(){
                        </ul>
                     </Col> 
                 </Row>
-                <Row>
-                    <Col lg={true}><img className='img-fluid'
+                <Row className='mb-5'>
+                    <Col lg={true}><img className='img-fluid mb-4'
                         src={cooking}
                         alt="cooking"
                       />  
-                       <Button onClick={handleClick}>Cooking</Button>
-                        <ul>
+                       <h4>Cooking</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Home cooking</a></li>
                         <li><a href="#">Meal prep</a></li>
                         <li><a href="#">Baking</a></li>
@@ -96,12 +94,12 @@ export default function HomePage(){
                        </ul>
                        </Col>
                     <Col lg={true}>
-                    <img className='img-fluid'
+                    <img className='img-fluid mb-4'
                         src={media}
                         alt="media and Marketing"
                       />  
-                       <Button onClick={handleClick}>Media and Marketing</Button>
-                        <ul>
+                       <h4>Media and Marketing</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Social media management</a></li>
                         <li><a href="#">Content creation</a></li>
                         <li><a href="#">Copywriting</a></li>
@@ -112,12 +110,12 @@ export default function HomePage(){
                        </ul>
                        </Col>
                     <Col lg={true}>
-                    <img className='img-fluid'
+                    <img className='img-fluid mb-4'
                         src={healthcare}
                         alt="healthcare"
                       />  
-                       <Button onClick={handleClick}>Healthcare</Button>
-                        <ul>
+                       <h4>Healthcare</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Healthcare assistance</a></li>
                         <li><a href="#">Medical administration help</a></li>
                         <li><a href="#">Patient support</a></li>
@@ -127,13 +125,13 @@ export default function HomePage(){
                        </ul>
                        </Col> 
                 </Row>
-                 <Row>
-                    <Col lg={true}><img className='img-fluid'
+                 <Row className="mb-5">
+                    <Col lg={true}><img className='img-fluid mb-4'
                         src={law}
                         alt="law"
                       />  
-                       <Button onClick={handleClick}>Law</Button>
-                       <ul>
+                       <h4>Law</h4>
+                       <ul className='p-0'>
                         <li><a href="#">Legal Research</a></li>
                         <li><a href="#">Contract review (basic)</a></li>
                         <li><a href="#">Document drafting</a></li>
@@ -143,12 +141,12 @@ export default function HomePage(){
                        </ul>
                        </Col>
                     <Col lg={true}>
-                    <img className='img-fluid'
+                    <img className='img-fluid mb-4'
                         src={music}
                         alt="music and dance"
                       />  
-                       <Button onClick={handleClick}>Music and Dance</Button>
-                        <ul>
+                       <h4>Music and Dance</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Music lessons</a></li>
                         <li><a href="#">Dance lessons</a></li>
                         <li><a href="#">Choreography</a></li>
@@ -158,12 +156,12 @@ export default function HomePage(){
                        </ul>
                        </Col>
                     <Col lg={true}>
-                    <img className='img-fluid'
+                    <img className='img-fluid mb-4'
                         src={translation}
                         alt="translation"
                       />  
-                       <Button onClick={handleClick}>Translations</Button>
-                        <ul>
+                       <h4>Translations</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Document translation</a></li>
                         <li><a href="#">Website translation</a></li>
                         <li><a href="#">Proofreading</a></li>
@@ -173,13 +171,13 @@ export default function HomePage(){
                        </ul>
                        </Col> 
                 </Row> 
-                <Row>
-                    <Col lg={true}><img className='img-fluid'
+                <Row className='mb-5'>
+                    <Col lg={true}><img className='img-fluid mb-4'
                         src={tutoring}
                         alt="tuturing"
                       />  
-                       <Button onClick={handleClick}>Tutoring</Button>
-                       <ul>
+                       <h4>Tutoring</h4>
+                       <ul className='p-0'>
                         <li><a href="#">Language tutoring</a></li>
                         <li><a href="#">Math tutoring</a></li>
                         <li><a href="#">Physics tutoring</a></li>
@@ -191,12 +189,12 @@ export default function HomePage(){
                        
                        </Col>
                     <Col lg={true}>
-                    <img className='img-fluid'
+                    <img className='img-fluid mb-4'
                         src={physiotherapy}
                         alt="physiotherapy"
                       />  
-                       <Button onClick={handleClick}>Physiotherapy (support only)</Button>
-                        <ul>
+                       <h4>Physiotherapy (support only)</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Exercise guidance</a></li>
                         <li><a href="#">Rehabilitation support</a></li>
                         <li><a href="#">Posture correction</a></li>
@@ -206,12 +204,12 @@ export default function HomePage(){
                        </ul>
                        </Col>
                     <Col lg={true}>
-                    <img className='img-fluid'
+                    <img className='img-fluid mb-4'
                         src={repairing}
                         alt="repairing"
                       />  
-                       <Button onClick={handleClick}>Repairing</Button>
-                        <ul>
+                       <h4>Repairing</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Home repairs</a></li>
                         <li><a href="#">Furniture assembly</a></li>
                         <li><a href="#">Plumbing help (basic)</a></li>
@@ -221,13 +219,13 @@ export default function HomePage(){
                        </ul>
                        </Col> 
                 </Row>
-                 <Row>
-                    <Col lg={true}><img className='img-fluid'
+                 <Row className='mb-5'>
+                    <Col lg={true}><img className='img-fluid mb-4'
                         src={electronics}
                         alt="electronics"
                       />  
-                       <Button onClick={handleClick}>Electronics</Button>
-                        <ul>
+                       <h4>Electronics</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Device repair</a></li>
                         <li><a href="#">Phone repair</a></li>
                         <li><a href="#">Computer repair</a></li>
@@ -237,12 +235,12 @@ export default function HomePage(){
                        </ul>
                        </Col>
                     <Col lg={true}>
-                    <img className='img-fluid'
+                    <img className='img-fluid mb-4'
                         src={art}
                         alt="art and design"
                       />  
-                       <Button onClick={handleClick}>Art and Design</Button>
-                        <ul>
+                       <h4>Art and Design</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Illustration</a></li>
                         <li><a href="#">Digital art</a></li>
                         <li><a href="#">Painting</a></li>
@@ -252,12 +250,12 @@ export default function HomePage(){
                        </ul>
                        </Col>
                     <Col lg={true}>
-                    <img className='img-fluid'
+                    <img className='img-fluid mb-4'
                         src={graphicDesign}
                         alt="graphic design"
                       />  
-                       <Button onClick={handleClick}>Graphic design</Button>
-                        <ul>
+                       <h4>Graphic design</h4>
+                        <ul className='p-0'>
                         <li><a href="#">Logo design</a></li>
                         <li><a href="#">Social media graphics</a></li>
                         <li><a href="#">Posters & flyers</a></li>

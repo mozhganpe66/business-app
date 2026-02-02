@@ -1,0 +1,17 @@
+ul{
+   list-style: none;
+   padding: 0px;
+   
+}
+li a{
+    text-decoration: none;
+    color: #06523D;
+}
+
+img{
+    border-radius: 10px;
+    width:300px;
+}
+.homepage-title{
+  color: #06523D;
+}
