@@ -2,11 +2,11 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard({ tasks, id}) {
   const navigate = useNavigate();
-  const params = useParams(id)
+
   function handleClick(event){
       navigate(`../applicants/${id}`);
   }
