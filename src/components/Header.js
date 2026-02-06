@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <Navbar expand="lg" className="header mb-4">
       <Container>
-        <Navbar.Brand href="/"><img className="logo-image" src={logo} img-fluid /></Navbar.Brand>
+        <Navbar.Brand href="/"><img className="logo-image" src={logo} img-fluid  alt="logo"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
