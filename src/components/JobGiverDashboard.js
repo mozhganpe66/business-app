@@ -21,7 +21,9 @@ export default function Dashboard({ tasks, id}) {
                 Task: {item.task} <br />
                 Category: {item.category} <br />
                 Status: {item.status} <br />
-                Applicants: {item.applicants}
+                Applicants: {item.applicants}  <br />
+                Price: {item.price} NOK  <br />
+                PostedBy: {item.postedBy}  <br />
               </Card.Text>
               <Button variant="primary" onClick={handleClick}>View Applicants</Button>
             </Card.Body>

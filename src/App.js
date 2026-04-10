@@ -13,18 +13,29 @@ import BidSubmitted from './components/BidSubmitted';
 import AreYouSure from './components/AreYouSure';
 import DashboardParent from './components/DashboardParent';
 import Applicants from './components/Applicants';
+import { useState, useEffect } from 'react';
 
 function App() {
+  // ✅ Load tasks from localStorage when app starts
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
+
+  // ✅ Save tasks to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
   return (
    <div>
       <Header />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-       <Route path="/dashboard/:userRole" element={<DashboardParent />} />
+        <Route path="/dashboard/:userRole" element={<DashboardParent tasks={tasks} />} />
+        <Route path="/ad" element={<Ad setTasks={setTasks}/>}/>
         <Route path="/registration" element={<Registration />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/ad" element={<Ad />} />
+        <Route path="/login" element={<Login setTasks={setTasks} />} />
         <Route path="/userProfile" element={<UserProfile/>} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/task/:id" element={<TaskDetails />} />

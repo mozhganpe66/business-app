@@ -2,9 +2,11 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 
 
-export default function Ad(){
+export default function Ad({setTasks}){
+   const navigate = useNavigate();
   
   const [data, setData]= useState({
     category: "" ,
@@ -15,6 +17,21 @@ export default function Ad(){
   const {category, price, details, postedBy} = data;
   function handleSubmit(event){
     event.preventDefault();
+    // add new task
+    setTasks(prev => [
+      ...prev,
+      {
+        task: data.details,
+        category: data.category,
+        status: "Open",
+        applicants: 0,
+        price: data.price,
+        postedBy: data.postedBy
+      }
+    ]);
+    
+    
+    navigate('../dashboard/jobGiver')
    
   }
   function handleChange(event){

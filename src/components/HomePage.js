@@ -18,8 +18,6 @@ import art from '../pictures/art.png';
 import graphicDesign from '../pictures/graphicDesign.png';
 import './HomePage.css';
 
-
-
 export default function HomePage(){
    
     return (
